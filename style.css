@@ -1,0 +1,215 @@
+*, *,::after, *::before {box-sizing: border-box; margin: 0; padding: 0;}
+
+html, body {
+    height: 100%;
+    font-size: 1vh;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.container {
+    height: 100vh;
+    width: 80vw;
+    display: flex;
+    overflow:hidden;
+}
+
+.wrapper {
+    width: 100%;
+    vertical-align: top;
+}
+
+.column0 {
+    width: 33.3%;
+    float: left;
+}
+
+.column1 {
+    width: 33.3%;
+    float: left;
+    margin-top: 10%;
+}
+
+.column2 {
+    width: 33.3%;
+    padding: 5%;
+    float: right;
+}
+
+div.card-front {
+   margin-left: -65%;
+   margin-bottom: 5%;
+   margin-top: 8%;
+   background-image: url(./images/bg-card-front.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   box-shadow: 1px 1px 3px hsl(279, 6%, 55%);
+    border-radius: 10px;
+    width: 30vw;
+   height: 30vh;
+}
+
+img.logo-cardfront {
+    margin-top: 5%;
+    margin-left: 5%; 
+}
+
+div.text-cardfront{
+    column-count: 2;
+}
+
+p.p-cardnumber {
+    margin-top: 15%;
+    margin-left: 5%;
+    font-size: 3vh;
+    color:  hsl(270, 3%, 87%);
+}
+
+p.p-cardName {
+    float: left;
+    margin-top: 10%;
+    margin-left: 10%;
+    font-size: 2vh;
+    text-transform: uppercase;
+    color:  hsl(270, 3%, 87%); 
+}
+
+div.date{
+    float: right;
+    width: 100%;
+    margin-top: 10%;
+    margin-right: 10%;
+}
+
+p.p-carddate {
+    float: right;
+    font-size: 2vh;
+    color:  hsl(270, 3%, 87%);
+}
+
+div.card-back {
+    margin-left: -50%;
+    margin-bottom: 5%;
+    background-image: url(./images/bg-card-back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 1px 1px 3px hsl(279, 6%, 55%);
+    border-radius: 10px;
+    width: 30vw;
+   height: 30vh;
+ }
+
+p.card-cvc {
+    float: right;
+    margin-top: 24%;
+    margin-right: 15%;
+    font-size: 2vh;
+    color:  hsl(270, 3%, 87%);
+}
+
+#form {
+    margin-top: 50%;
+    margin-left: -30%;
+}
+
+label {
+    display: block;
+    margin-bottom: 3%;
+    margin-top: 10%;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 1.5vh;
+    color: hsl(278, 68%, 11%);
+}
+
+input.form-control{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5vh;
+    padding: 5%;
+    color:  hsl(279, 6%, 55%);
+    border-color:  hsl(270, 3%, 87%);
+    border: solid;
+    border-width: 0.5px;
+    border-radius: 8px;
+    height: 6vh;
+    width: 25vw;
+}
+
+input:active {
+    border: 2px solid  hsl(278, 94%, 30%);
+    box-shadow: inset 1px 1px 3px  hsl(278, 94%, 30%);
+}
+
+input::placeholder{
+    font-size: 1.8vh;
+    padding: 1%;
+    
+}
+
+div.date-cvc {
+    column-count: 2;
+    margin-top: 5%;
+}
+
+input.date-input{
+    width: 45%;
+    margin-right: 2%;
+}
+
+input#card-cvc{
+    float: right;
+    width: 11vw;
+}
+
+label#card-cvclabel {
+    float: right;
+    margin-top: 10%;
+    margin-right: 70%;
+}
+
+button {
+    margin-top: 10%;
+    width: 25vw;
+    height: 6vh;
+    border-radius: 8px;
+    border: solid;
+    border-width: 0.5px;
+    background-color: hsl(278, 94%, 30%);
+    color:  hsl(0, 0%, 100%);
+    font-size: 2.5vh;
+}
+
+button:hover{
+    background-color:hsl(0, 0%, 100%);
+    color:  hsl(278, 94%, 30%);
+    cursor: pointer;
+    box-shadow: 1px 1px 3px hsl(279, 6%, 55%);
+}
+
+.error {
+    color: red;
+}
+
+div#sucess-message {
+    width: 100%;
+    margin-top: 85%;
+    margin-left: 25%;
+}
+
+h1.h1-sucess{
+    font-size: 3vh;
+    margin-top: 5%;
+    margin-left: 18%;
+}
+
+p.p-sucess{
+    margin-top: 2%;
+    font-size: 2vh;
+    color:  hsl(279, 6%, 55%);
+}
+
+svg{
+    margin-left: 22%;
+}
+

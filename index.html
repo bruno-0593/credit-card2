@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/d1314feeb4.js" crossorigin="anonymous"></script>
+  <title>Interactive card details form</title>
+</head>
+<body>
+  
+  <div class="container">
+    <main class="wrapper">
+
+      <div class="column0">
+        <img src="./images/bg-main-desktop.png" alt="">
+      </div>
+
+
+      <div class="column1">
+        <div class="card-front">
+          <img src="./images/card-logo.svg" alt="" class="logo-cardfront">
+          <p class="p-cardnumber">0000 0000 0000 0000</p>
+          <div class="text-cardfront">
+            <p class="p-cardName">Card Name</p>
+            <div class="date">
+              <p class="p-carddate" id="date-year">29</p>
+              <p class="p-carddate">/</p>
+              <p class="p-carddate" id="date-month">09</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-back">
+            <p class="card-cvc">000</p>
+        </div>
+      </div>
+
+      <div class="column2">
+        <form id="form" onsubmit="return validateForm()">
+          <div class="form-group">
+            <label for="cardName" class="form-label">Cardholder name</label>
+            <input type="text" class="form-control" name="cardName" id="card-name" placeholder="E.g. Bruno Rocha">
+            <span class="error"></span>
+          </div>
+        
+          <div class="form-group">
+            <label for="cardNumber" class="form-label">Card number</label>
+            <input type="text" class="form-control" name="cardnumber" id="cardNumber" placeholder="E.g. 1234 5678 9123 0000" pattern="[0-9]*">
+            <span class="error"></span>
+          </div>
+
+          <div class="date-cvc">
+            <div class="form-group">
+              <label for="cardDate" class="form-label">Exp. Date (MM/YY)</label>
+              <div class="form-inline">
+                <input type="text" class="date-input form-control" name="datemm" id="input-month" placeholder="MM" pattern="[0-9]*">
+                <input type="text" class="date-input form-control" name="dateyy" id="input-year" placeholder="YY" pattern="[0-9]*">
+                <span class="error"></span>
+              </div>
+            </div>
+          
+            <div class="form-group">
+              <label for="card-cvc" class="form-label" id="card-cvclabel">CVC</label>
+              <input type="text" class="form-control" name="cardcvc" id="card-cvc" placeholder="E.g 123" pattern="[0-9]*">
+              <span class="error"></span>
+            </div>
+          </div>
+        
+          <div class="form-group">
+            <button id="submit" class="btn btn-primary" type="submit">Confirm</button>
+          </div>
+        </form>
+
+        <div id="sucess-message">
+          <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/><defs><linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse"><stop stop-color="#6348FE"/><stop offset="1" stop-color="#610595"/></linearGradient></defs></svg>
+          <h1 class="h1-sucess">Thank You!</h1>
+          <p class="p-sucess">We`ve added your card details</p>
+        </div>
+      </div>
+
+    </main>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
+
